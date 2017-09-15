@@ -8,3 +8,13 @@ def home(req):
     context = {}
     context['site_header'] = 'Squid'
     return render(req, 'modules/home.html', context)
+
+def permissions(req):
+    context = {}
+    context['site_header'] = 'Squid'
+    return render(req, 'modules/permissions.html', context)
+
+def groups(req):
+    context = {}
+    context['site_header'] = 'Squid'
+    return render(req, 'modules/groups.html', context)
