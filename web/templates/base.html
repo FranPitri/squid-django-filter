@@ -8,10 +8,49 @@
         <title>{{site_header|default:'Dashboard'}}</title>
         {% block links %}{% endblock %}
         {% block fonts %}{% endblock %}
+        <style>
+            @font-face {
+             font-family: 'Monserrat';
+             src: url("{% static 'fonts/Montserrat-Regular.ttf' %}"),
+                  url("{% static 'fonts/Montserrat-Medium.ttf' %}"),
+                  url("{% static 'fonts/Montserrat-Bold.ttf' %}"),
+                  url("{% static 'fonts/Montserrat-Black.ttf' %}");
+            }
+
+            * {
+                /* reset and font */
+                font-family: 'Montserrat', sans-serif;
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            html, body {
+                color: #424242;
+            }
+            
+            h1 {
+                font-weight: 900;
+            }
+
+            .wrapper {
+                display: flex;
+                flex-direction: row;
+                height: 100vh;
+                background-color: #fafafa;
+            }
+            @media (max-width: 576px) {
+                .wrapper {
+                    flex-direction: column;
+                }
+            }
+        </style>
     </head>
     <body>
-        {% block sideBar %}{% endblock %}
-        {% block main %}{% endblock %}
-        {% block scripts %}{% endblock %}
+        <div class="wrapper">
+            {% block sidebar %}{% endblock %}
+            {% block main %}{% endblock %}
+            {% block scripts %}{% endblock %}
+        </div>
     </body>
 </html>

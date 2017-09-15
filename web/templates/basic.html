@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load static %}
+
+{% block links %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css'%}" >
+    <link rel="stylesheet" href="{% static 'css/sidebar.css'%}" >
+{% endblock %}
+
+{% block fonts %}
+    <link rel="stylesheet" href="{% static 'fonts/Montserrat-Regular.ttf' %}" />
+    <link rel="stylesheet" href="{% static 'fonts/Montserrat-Black.ttf' %}" />
+{% endblock %}
+
+{% block sidebar %}
+    {% include 'incl/sidebar.html' %}
+{% endblock %}
+
+{% block main %}
+{% endblock %}
+
+{% block scripts %}
+    <script src="{% static 'js/jquery-3.2.1.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/sidebar.js' %}"></script>
+{% endblock %}
