@@ -1,0 +1,70 @@
+.permissionsWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 35%;/*77%;*/
+    height: 95%;
+    background-color: #fff;
+    box-shadow: 0 1px 5px rgba(100,100,100,0.3);
+    margin-left: 2%;
+    justify-content: center;
+    align-items: center;
+}
+
+.permissionsContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 5%;
+    width: 100%;
+}
+
+.title {
+    color: #424242;
+    font-weight: 900;
+    font-size: 1.1em;
+}
+
+.permissionsListContainer {
+    width: 90%;
+    overflow-y: scroll;
+    margin-top:4%;
+    border: 1px solid #BDBDBD;
+    border-radius: 2px;
+}
+
+.permissionsList {
+    /*
+    margin-top:5%;
+    margin-bottom:5%;
+    */
+    width: 100%;
+}
+
+.addPermissionButton {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 80%;
+}
+
+.addPermissionButton:hover {
+    cursor: pointer;
+}
+
+/* ---------- data ---------- */
+
+.dataContainer {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 95%;
+    background-color: #fff;
+    box-shadow: 0 1px 5px rgba(100,100,100,0.3);
+    margin-left: 2%;
+    align-items: center;
+}
+
+.dataContainer form {
+    margin-top: 5%;
+    width: 90%;
+}

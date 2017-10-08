@@ -2,6 +2,7 @@
     background-color: #fff;
     box-shadow: 1px 0 5px rgba(100,100,100,0.1);
     flex: 0 0 6em;
+    height: 100% !important;
 }
 
 .nav-item {
@@ -31,5 +32,6 @@
     }
     .sidebar {
         padding-bottom: 3em;
+        width: 100% !important;
     }
 }
