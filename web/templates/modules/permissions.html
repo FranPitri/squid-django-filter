@@ -2,6 +2,59 @@
 {% load staticfiles %}
 {% load static %}
 
+{% block links %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'css/permissions.css'%}" >
+{% endblock %}
+
 {% block main %}
-    <span>permissions</span>
+    <div class="permissionsWrapper">
+        <div class="permissionsContainer">
+            <span class="title">Current permissions</span>
+            <div class="permissionsListContainer">
+                <ul class="list-group permissionsList">
+                    <a href="#" class="list-group-item active">Cras justo odio</a>
+                    <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+                    <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+                    <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+                    <a href="#" class="list-group-item list-group-item-action">Vestibulum at eros</a>
+                    <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+                    <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+                    <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+                    <a href="#" class="list-group-item list-group-item-action">Vestibulum at eros</a>
+                    <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+                    <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+                    <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+                    <a href="#" class="list-group-item list-group-item-action">Vestibulum at eros</a>
+                </ul>
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary addPermissionButton">Add Permission</button>
+    </div>
+
+    <div class="dataContainer">
+        <form>
+            <div class="form-group">
+                <label for="permissionTitle">Title</label>
+                <input type="text" class="form-control" id="permissionTitle" placeholder="Enter a title..">
+            </div>
+            <div class="form-group">
+                <label for="permissionUrls">Blocked URLs</label>
+                <textarea class="form-control" id="permissionUrls" rows="3"></textarea>
+                <small class="form-text text-muted">Enter a URL or a list of them, one per line.</small>
+            </div>
+            <div class="form-group">
+                <label for="permissionKeywords">Blocked keywords</label>
+                <textarea class="form-control" id="permissionKeywords" rows="3"></textarea>
+                <small class="form-text text-muted">Enter a list of keywords.</small>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input">
+                    Check me out
+                </label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
 {% endblock %}
