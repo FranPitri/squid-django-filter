@@ -2,6 +2,15 @@
 {% load staticfiles %}
 {% load static %}
 
+{% block links %}
+    {{block.super}}
+    <link rel="stylesheet" href="{% static 'css/groups.css' %}">
+{% endblock %}
+
 {% block main %}
-    <span>groups</span>
+    <form method="POST" action="{% url 'web:groups' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit" />
+    </form>
 {% endblock %}
